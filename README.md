@@ -28,25 +28,25 @@ There are plenty of shortcuts but this are the basic ones:
 |:---------------:|:------------------------------------------------------------------------------------------------------------|:---------------:|
 | *               | Search forward word under the cursor                                                                        | vim             |
 | n               | Search next word using same criteria                                                                        | vim             |
-| <Shift>+n       | Search previous word using same criteria                                                                    | vim             |
+| Shift+n         | Search previous word using same criteria                                                                    | vim             |
 | #               | Search backward word under the cursor                                                                       | vim             |
 | K               | Search for the word inside man                                                                              | vim             |
 | gd              | Go to first definition of the element under the cursor                                                      | vim             |
-| <F2>            | Start writting and ultisnips will fill the basic skeleton (check examples)                                  | ultisnips       |
-| <F3>            | Tagbar panel (on/off)                                                                                       | tagbar          |
-| <F4>            | NERD Tree (on/off)                                                                                          | nerdtree        |
-| <F8>            | Save current session on current folder                                                                      | vim             |
-| <Alt>+<up>      | Show all buffers                                                                                            | BufferExplorer  |
-| <Alt>+<down>    | Close current buffer                                                                                        | vim             |
-| <Alt>+<left>    | Move to previous buffer                                                                                     | vim             |
-| <Alt>+<right>   | Move to next buffer                                                                                         | vim             |
-| <Ctrl>+<up>     | Move current line/block up                                                                                  | vim             |
-| <Ctrl>+<down>   | Move current line/block down                                                                                | vim             |
-| <Ctrl>+<right>  | Indent current line/block one level                                                                         | vim             |
-| <Ctrl>+<left>   | Unindent current line/block one level                                                                       | vim             |
-| <Ctrl>+P colors | Search for files with the word "colors" in all the project                                                  | ctrlp           |
-| <Enter>         | Go to function definition                                                                                   | ctags           |
-| <Backspace>     | Go back from function definition                                                                            | ctags           |
+| F2              | Start writting and ultisnips will fill the basic skeleton (check examples)                                  | ultisnips       |
+| F3              | Tagbar panel (on/off)                                                                                       | tagbar          |
+| F4              | NERD Tree (on/off)                                                                                          | nerdtree        |
+| F8              | Save current session on current folder                                                                      | vim             |
+| Alt+up          | Show all buffers                                                                                            | BufferExplorer  |
+| Alt+down        | Close current buffer                                                                                        | vim             |
+| Alt+left        | Move to previous buffer                                                                                     | vim             |
+| Alt+right       | Move to next buffer                                                                                         | vim             |
+| Ctrl+up         | Move current line/block up                                                                                  | vim             |
+| Ctrl+down       | Move current line/block down                                                                                | vim             |
+| Ctrl+right      | Indent current line/block one level                                                                         | vim             |
+| Ctrl+left       | Unindent current line/block one level                                                                       | vim             |
+| Ctrl+P colors   | Search for files with the word "colors" in all the project                                                  | ctrlp           |
+| Enter           | Go to function definition                                                                                   | ctags           |
+| Backspace       | Go back from function definition                                                                            | ctags           |
 | :TagsGenerate!  | Will generate one or more tags files                                                                        | vim-tags        |
 | :7,17Commentary | Coment/Uncomment from line 7 to line 17 both included                                                       | Commentary      |
 | :Ack colors     | Search everywhere in the project for the word "colors"                                                      | Ack             |
