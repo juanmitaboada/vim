@@ -1,26 +1,8 @@
 if !1 | finish | endif
 
 " VIM Juanmi Taboada:
-" Version: 20230226
+" Version: 20230308
 " Author: Juanmi Taboada <juanmi@juanmitaboada.com> - http://www.juanmitaboada.com
-"
-" === INSTALL ===
-"
-" 1) Copy vimrc to your $HOME folder as .vimrc (don't forget the dot at the begining)
-"
-" 2) Make sure your system is ready for this:
-" $ sudo apt-get install ncurses-term git prospector pyflakes3 pylama pymetrics python3-mccabe python3-flake8 bandit python3-bandit
-" $ cd ~
-" $ echo 'alias vim="TERM=xterm+256color vim"' >> ~/.bashrc
-"
-" 3) Install Pathogen inside your vim:
-" $ mkdir -p ~/.vim/autoload ~/.vim/bundle
-" $ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-"
-" 4) Go inside your bundle folder and install/update all plugins:
-" $ cd ~/.vim/bundle
-" $ ./update.sh
-" (Whenever you would like to update all your plugins come again to this step)
 "
 " === CHEATSHEET ===
 "
@@ -154,8 +136,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " ctags controls
-" for ctags to work you must make a "tags" file inside some of your projects
-" folder from the list of vim-tags plugin: [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
+" for ctags to work you must make a 'tags' file inside some of your projects
+" folder from the list of vim-tags plugin: ['.git', '.hg', '.svn', '.bzr', '_darcs', 'CSV']
+" let g:vim_tags_auto_generate = 1
 let g:vim_tags_use_language_field = 1
 map <cr> <c-]>
 map <bs> <c-t>
