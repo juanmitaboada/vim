@@ -1,10 +1,10 @@
 # My VIM configuration
 
-I work daily with vim from I was a child, and this is my actual vim configuration.
+I have worked daily with vim since childhood, and this is my actual vim configuration.
 
 ## Installation
 
-1. Go to your home folder, clone this repository and rename it to .vim:
+1. Go to your home folder, clone this repository, and rename it to .vim:
 
     `cd ~ && git clone https://github.com/juanmitaboada/vim && mv vim .vim`
 
@@ -12,7 +12,7 @@ I work daily with vim from I was a child, and this is my actual vim configuratio
 
     `~/.vim/vim_install_plugins.sh`
 
-3. Let install all plugins:
+3. Let's install all plugins:
 
    `cd ~/.vim/bundle/ && ./update.sh`
 
@@ -22,20 +22,20 @@ I work daily with vim from I was a child, and this is my actual vim configuratio
 ## Shortcuts
 
 
-There are plenty of shortcuts but this are the basic ones:
+There are plenty of shortcuts but, these are the basic ones:
 
 | Shortcut        | Description                                                                                                 | Provided by     |
 |:---------------:|:------------------------------------------------------------------------------------------------------------|:---------------:|
 | *               | Search forward word under the cursor                                                                        | vim             |
-| n               | Search next word using same criteria                                                                        | vim             |
-| Shift+n         | Search previous word using same criteria                                                                    | vim             |
+| n               | Search next word using the same criteria                                                                    | vim             |
+| Shift+n         | Search the previous word using the same criteria                                                            | vim             |
 | #               | Search backward word under the cursor                                                                       | vim             |
 | K               | Search for the word inside man                                                                              | vim             |
-| gd              | Go to first definition of the element under the cursor                                                      | vim             |
-| F2              | Start writting and ultisnips will fill the basic skeleton (check examples)                                  | ultisnips       |
+| gd              | Go to the first definition of the element under the cursor                                                  | vim             |
+| F2              | Start writing and, ultisnips will fill the basic skeleton (check examples)                                  | ultisnips       |
 | F3              | Tagbar panel (on/off)                                                                                       | tagbar          |
 | F4              | NERD Tree (on/off)                                                                                          | nerdtree        |
-| F8              | Save current session on current folder                                                                      | vim             |
+| F8              | Save the current session on the current folder                                                              | vim             |
 | Alt+up          | Show all buffers                                                                                            | BufferExplorer  |
 | Alt+down        | Close current buffer                                                                                        | vim             |
 | Alt+left        | Move to previous buffer                                                                                     | vim             |
@@ -48,7 +48,7 @@ There are plenty of shortcuts but this are the basic ones:
 | Enter           | Go to function definition                                                                                   | ctags           |
 | Backspace       | Go back from function definition                                                                            | ctags           |
 | :TagsGenerate!  | Will generate one or more tags files                                                                        | vim-tags        |
-| :7,17Commentary | Coment/Uncomment from line 7 to line 17 both included                                                       | Commentary      |
+| :7,17Commentary | Comment/Uncomment from line 7 to line 17 both included                                                      | Commentary      |
 | :Ack colors     | Search everywhere in the project for the word "colors"                                                      | Ack             |
 
 
@@ -116,13 +116,13 @@ def:
 | [Arduino Snippets](https://github.com/sudar/vim-arduino-snippets)               | Snippets files for Arduino                                                                                                                  |
 | [Arduino Syntax](https://github.com/sudar/vim-arduino-syntax)                   | Syntax file and get syntax highlighting for Arduino functions                                                                               |
 | [Black](https://github.com/psf/black)                                           | Uncompromising Python code formatter                                                                                                        |
-| [Bufexplorer](https://github.com/jlanzarotta/bufexplorer)                       | Quickly and easily switch between buffers                                                                                                   |
+| [Bufexplorer](https://github.com/jlanzarotta/bufexplorer)                       | Quickly and easily switches between buffers                                                                                                 |
 | [CCLS](https://github.com/MaskRay/ccls)                                         | Ccls, which originates from cquery, is a C/C++/Objective-C language server                                                                  |
-| [CCTree](https://github.com/hari-rangarajan/CCTree)                             | Plugin generates symbol dependency tree (https://github.com/aka call tree, call graph) in real-time                                         |
+| [CCTree](https://github.com/hari-rangarajan/CCTree)                             | Plugin generates a symbol dependency tree (https://github.com/aka call tree, call graph) in real-time                                       |
 | [Clang](https://github.com/justmao945/vim-clang)                                | Use of clang to parse and complete C/C++ source files                                                                                       |
 | [Commentary](https://github.com/tpope/vim-commentary)                           | Comment stuff out                                                                                                                           |
 | [CtrlP](https://github.com/kien/ctrlp.vim)                                      | Full path fuzzy file, buffer, mru, tag, ... finder                                                                                          |
-| [DelimitMate](https://github.com/Raimondi/delimitMate)                          | This plug-in provides automatic closing of quotes, parenthesis, brackets, etc.                                                              |
+| [DelimitMate](https://github.com/Raimondi/delimitMate)                          | This plug-in provides automatic closing of quotes, parentheses, brackets, etc.                                                              |
 | [Dispatch](https://github.com/tpope/vim-dispatch)                               | Leverage the power of Vim's compiler plugins without being bound by synchronicity                                                           |
 | [Gitgutter](https://github.com/airblade/vim-gitgutter)                          | Shows a git diff in the sign column                                                                                                         |
 | [ISort](https://github.com/fisadev/vim-isort)                                   | Sort python imports                                                                                                                         |
@@ -133,7 +133,7 @@ def:
 | [Pathogen](https://github.com/tpope/vim-pathogen)                               | Makes it super easy to install plugins and runtime files                                                                                    |
 | [Platform.io](https://github.com/normen/vim-pio)                                | This is a collection of helper commands to ease the use of PlatformIO                                                                       |
 | [Platform.io Neomake](https://github.com/coddingtonbear/neomake-platformio)     | Easily configure neomake to recognize your PlatformIO project's include path                                                                |
-| [Radon](https://github.com/aesnyder/vim-radon)                                  | Show cyclomatic complexity of Python code                                                                                                   |
+| [Radon](https://github.com/aesnyder/vim-radon)                                  | Show the cyclomatic complexity of Python code                                                                                               |
 | [Repeat](https://github.com/tpope/vim-repeat)                                   | Remaps . in a way that plugins can tap into it                                                                                              |
 | [Rust](https://github.com/rust-lang/rust.vim)                                   | Rust file detection, syntax highlighting, formatting, Syntastic integration, and more                                                       |
 | [Signify](https://github.com/mhinz/vim-signify)                                 | Uses the sign column to indicate added, modified and removed lines in a file that is managed by a VCS                                       |
