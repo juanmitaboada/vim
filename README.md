@@ -4,15 +4,15 @@ I work daily with vim from I was a child, and this is my actual vim configuratio
 
 ## Installation
 
-1. Go to your home folder, clone this repository and rename it to .vim::
+1. Go to your home folder, clone this repository and rename it to .vim:
 
     `cd ~ && git clone https://github.com/juanmitaboada/vim && mv vim .vim`
 
-2. Install dependencies (it will request your sudo password)::
+2. Install dependencies (it will request your sudo password):
 
     `~/.vim/vim_install_plugins.sh`
 
-3. Let install all plugins::
+3. Let install all plugins:
 
    `cd ~/.vim/bundle/ && ./update.sh`
 
@@ -54,39 +54,39 @@ There are plenty of shortcuts but this are the basic ones:
 
 #### Ultistnips
 
-if::
+if:
 
     if condition:
         pass
 
-ife::
+ife:
 
     if condition:
         pass
     else:
         pass
 
-ei::
+ei:
 
     elif condition:
         ...
 
-el::
+el:
 
     else:
         ...
 
-for::
+for:
 
     for item in iterable:
         pass
 
-wl::
+wl:
 
     while condition:
         ...
 
-cl::
+cl:
 
     class ClassName(object):
         """doctstring for ClassName"""
@@ -94,7 +94,7 @@ cl::
             super(ClassName, self).__init__()
             self.arg = arg
 
-def::
+def:
 
     def function(arg1):
         """TODO: Docstring for function.
