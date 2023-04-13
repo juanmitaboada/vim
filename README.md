@@ -43,6 +43,7 @@ There are plenty of shortcuts but, these are the basic ones:
 | F3              | Tagbar panel (on/off)                                                                                       | tagbar          |
 | F4              | NERD Tree (on/off)                                                                                          | nerdtree        |
 | F8              | Save the current session on the current folder                                                              | vim             |
+| Ctrl+J          | Beautify the buffer using JSON format                                                                       | vim             |
 | Alt+up          | Show all buffers                                                                                            | BufferExplorer  |
 | Alt+down        | Close current buffer                                                                                        | vim             |
 | Alt+left        | Move to previous buffer                                                                                     | vim             |

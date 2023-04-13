@@ -15,6 +15,7 @@ if !1 | finish | endif
 " <F3>              Tagbar panel (on/off)                   [ tagbar ]
 " <F4>              NERD Tree (on/off)                      [ nerdtree ]
 " <F8>              Save current session on current folder  [ vim ]
+" <Ctrl+J           Beautify buffer using JSON format       [ vim ]
 " <Alt>+<up>        Show all buffers                        [ BufferExplorer ]
 " <Alt>+<down>      Close current buffer                    [ vim ]
 " <Alt>+<left>      Move to previous buffer                 [ vim ]
