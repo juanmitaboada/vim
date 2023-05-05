@@ -28,7 +28,7 @@ hari-rangarajan/CCTree
 sudar/vim-arduino-syntax
 sudar/vim-arduino-snippets
 Valloric/YouCompleteMe
-fisadev/vim-isort
+brentyi/isort.vim
 psf/black
 tpope/vim-pathogen
 rust-lang/rust.vim
@@ -38,6 +38,7 @@ prabirshrestha/vim-lsp
 normen/vim-pio
 coddingtonbear/neomake-platformio
 aesnyder/vim-radon
+itspriddle/vim-shellcheck
 '
 # You complete me:
 # Valloric/YouCompleteMe
@@ -47,27 +48,30 @@ aesnyder/vim-radon
 # LucHermitte/lh-vim-lib
 # LucHermitte/local_vimrc
 
+# Old vim-isort pluggin
+# fisadev/vim-isort
+
 # Golang - https://pmihaylov.com/vim-for-go-development/
 # tpope/vim-pathogen
 
 # Make sure basic packages are installed
 for url in $base ; do
-    user="`echo $url | cut -d "/" -f 1`"
-    repo="`echo $url | cut -d "/" -f 2`"
+    user="$(echo "$url" | cut -d "/" -f 1)"
+    repo="$(echo "$url" | cut -d "/" -f 2)"
     if [[ ! -e $repo ]] ; then
-        git clone https://github.com/$user/$repo
+        git clone "https://github.com/$user/$repo"
     fi
 done
 
 # Now go for the upgrade
 
-cwd="`pwd`"
-elements="`/bin/ls`"
+cwd="$(pwd)"
+elements="$(/bin/ls)"
 
 for element in $elements ; do
-    cd $cwd
+    cd "$cwd" || exit
     if [[ -d $element ]] ; then
-        cd $element
+        cd "$element" || exit
         if [[ -d .git ]] ; then
            echo "Updating ${element}..."
            git pull
@@ -75,13 +79,13 @@ for element in $elements ; do
         fi
     fi
 done
-cd $cwd
+cd "$cwd" || exit
 
 # Recompile YoyCompleteMe
 echo ""
 echo "====================== ---> Updating YouCompleteMe <--- ================"
 echo ""
-cd YouCompleteMe/
+cd YouCompleteMe/ || exit
 echo "Updating submodules..."
 git submodule update --init --recursive
 echo "Recompiling submodules..."

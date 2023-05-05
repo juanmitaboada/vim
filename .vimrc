@@ -248,10 +248,15 @@ augroup black_on_save
  autocmd!
  autocmd BufWritePre *.py Black
 augroup end
-nnoremap <F9> :Black<CR>
+" nnoremap <F9> :Black<CR>
 
 " ISort
+"augroup isort_on_save
+" autocmd!
+" autocmd BufWritePre *.py Isort
+"augroup end
 " nnoremap <F10> :Isort<CR>
+" let g:isort_vim_options = '--profile black'
 
 " JSON Format
 nnoremap <C-j> :%!python -m json.tool<CR>
