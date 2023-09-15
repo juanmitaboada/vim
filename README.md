@@ -3,6 +3,9 @@
 I have worked daily with vim since childhood, and this is my actual vim configuration.
 
 ## Screenshots
+
+Gitgutter + inline errors  + linting:
+
 ![gitgutter_errors_linting](https://user-images.githubusercontent.com/1763207/223777379-99211f11-a42b-4af9-87a2-c1a364452a5f.png)
 ![bufferexplorer](https://user-images.githubusercontent.com/1763207/223777381-400b8df9-20b5-4df1-a119-08602fa01ce0.png)
 ![ack](https://user-images.githubusercontent.com/1763207/223777382-1169f499-594f-4c76-9181-9f19fed55424.png)
