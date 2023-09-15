@@ -15,15 +15,19 @@ I have worked daily with vim since childhood, and this is my actual vim configur
 
     `cd ~ && git clone https://github.com/juanmitaboada/vim && mv vim .vim`
 
-2. Install dependencies (it will request your sudo password):
+2. Link .vimrc into your home folder:
+
+    `ln -s .vim/.vimrc`
+
+3. Install dependencies (it will request your sudo password):
 
     `~/.vim/vim_install_plugins.sh`
 
-3. Let's install all plugins:
+4. Let's install all plugins:
 
    `cd ~/.vim/bundle/ && ./update.sh`
 
-4. You are ready to go
+5. You are ready to go
 
 
 ## Shortcuts
