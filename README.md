@@ -11,6 +11,12 @@ I have worked daily with vim since childhood, and this is my actual vim configur
 
 ## Installation
 
+Before you go, make sure you make a backup of your current vim configuration, go to your home folder and rename both .vim folder and .vimrc file to a different name:
+
+    `cd ~ && mv .vimrc .vimrc.backup && mv .vim .vim.backup`
+
+Let's install:
+
 1. Go to your home folder, clone this repository, and rename it to .vim:
 
     `cd ~ && git clone https://github.com/juanmitaboada/vim && mv vim .vim`
