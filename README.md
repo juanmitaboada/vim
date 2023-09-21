@@ -34,7 +34,7 @@ Let's install:
 
 1. Go to your home folder, clone this repository, and rename it to .vim:
 
-    `cd ~ && git clone https://github.com/juanmitaboada/vim && mv vim .vim`
+    cd ~ && git clone https://github.com/juanmitaboada/vim && mv vim .vim
 
 2. Link .vimrc into your home folder:
 
