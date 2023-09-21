@@ -28,7 +28,7 @@ Radeon and Control+P:
 
 Before you go, make sure you make a backup of your current vim configuration, go to your home folder and rename both .vim folder and .vimrc file to a different name:
 
-    `cd ~ && mv .vimrc .vimrc.backup && mv .vim .vim.backup`
+    cd ~ && mv .vimrc .vimrc.backup && mv .vim .vim.backup
 
 Let's install:
 
