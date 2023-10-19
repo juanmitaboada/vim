@@ -40,9 +40,12 @@ if !1 | finish | endif
 " class     class ...
 " def       def ...
 "
-" Comentary:
-" To comment from line 7 to 17 both included, use:
-" :7,17Commentary
+" Commentary:
+" gc{motion}        Comment or uncomment lines that {motion} moves over
+" {Visual}gc        Comment or uncomment the hightlighted lines
+" gc?               Comment or uncomment [?=count] lines. (Example: gcc4)
+" gcu | gcgc        Uncomment the current and adjacent commented lines
+" :7,17Commentary   Comment or uncomment from lines 7 to 17 both included
 "
 " ACK:
 " To search everywhere for the word "colors" use:
@@ -187,6 +190,7 @@ nmap <F8> :mks! .session.vim<CR>
 " E503: Line break occurred before a binary operator
 
 " ALE configuration (Asynchronous Linter Engine)
+let g:ale_cpp_cpplint_options = '--clint'
 let g:ale_sign_column_always = 1
 let g:ale_python_pycodestyle_options = '--ignore=E203,W503'
 let g:ale_python_flake8_options = '--ignore=E203,W503'
@@ -262,3 +266,72 @@ augroup end
 nnoremap <C-j> :%!python -m json.tool<CR>
 
 let g:radon_always_on=1
+
+" uncrustify
+" --replace, -q, --no-backup, --set, "indent_columns=4", --set, "indent_with_tabs=0"]
+"
+" clang-format configuration
+let g:clang_format#auto_format = 1
+let g:clang_format#style_options = {
+            \ "BasedOnStyle": "Google",
+            \ "BinPackArguments": "false",
+            \ "BinPackParameters": "false",
+            \ "AccessModifierOffset" : -4,
+            \ "AlignOperands": "Align",
+            \ "AlignArrayOfStructures": "Left",
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AllowShortBlocksOnASingleLine": "Empty",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "IndentWidth": 4,
+            \ "PointerAlignment": "Right",
+            \ "QualifierAlignment": "Left",
+            \ "RemoveBracesLLVM": "false",
+            \ "SeparateDefinitionBlocks": "Always",
+            \ "Standard" : "Auto",
+            \ "SpaceAfterCStyleCast": "true",
+            \ "SpaceAfterLogicalNot": "false",
+            \ "SpaceAfterTemplateKeyword": "true",
+            \ "SpaceAroundPointerQualifiers": "Default",
+            \ "SpaceBeforeAssignmentOperators": "true",
+            \ "SpaceBeforeCaseColon": "false",
+            \ "SpaceBeforeCpp11BracedList": "true",
+            \ "SpaceBeforeCtorInitializerColon": "false",
+            \ "SpaceBeforeInheritanceColon": "false",
+            \ "SpaceBeforeParens": "ControlStatements",
+            \ "SpaceBeforeRangeBasedForLoopColon": "true",
+            \ "SpaceBeforeSquareBrackets": "false",
+            \ "SpaceInEmptyBlock": "false",
+            \ "SpacesBeforeTrailingComments": "2",
+            \ "SpacesInAngles": "Never",
+            \ "SpacesInContainerLiterals": "false",
+            \ "SpacesInCStyleCastParentheses": "false",
+            \ }
+
+            " \ "AllowAllArgumentsOnNextLine": "false",
+            " \ "AllowAllParametersOfDeclarationOnNextLine": "false",
+            " \ "BraceWrapping": {
+            " \   "AfterCaseLabel":  "false",
+            " \   "AfterClass":      "false",
+            " \   "AfterControlStatement": "false",
+            " \   "AfterEnum":       "false",
+            " \   "AfterFunction":   "false",
+            " \   "AfterNamespace":  "false",
+            " \   "AfterObjCDeclaration": "false",
+            " \   "AfterStruct":     "false",
+            " \   "AfterUnion":      "false",
+            " \   "AfterExternBlock": "false",
+            " \   "BeforeCatch":     "false",
+            " \   "BeforeElse":      "false",
+            " \   "BeforeLambdaBody": "false",
+            " \   "BeforeWhile": "false",
+            " \   "IndentBraces":    "true",
+            " \   "SplitEmptyFunction": "false",
+            " \   "SplitEmptyRecord": "false",
+            " \   "SplitEmptyNamespace": "false",
+            " \  },
+            " \ "BreakBeforeBraces": "Custom",
+            " 
+            " \ "InsertBraces": "true",
+            " \ "RemoveParentheses": "RPS_ReturnStatement",
+            " \ "RemoveSemicolon": "true",
+            " \ "SpaceBeforeJsonColon": "false",

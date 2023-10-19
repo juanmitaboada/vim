@@ -39,6 +39,7 @@ normen/vim-pio
 coddingtonbear/neomake-platformio
 aesnyder/vim-radon
 itspriddle/vim-shellcheck
+rhysd/vim-clang-format
 '
 # You complete me:
 # Valloric/YouCompleteMe
