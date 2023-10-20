@@ -92,3 +92,16 @@ git submodule update --init --recursive
 echo "Recompiling submodules..."
 ./install.py --clang-completer
 cd ..
+
+# Verify ALE CPPCHECK plugin status
+if grep -q "file-filter" ale/autoload/ale/handlers/cppcheck.vim ; then
+    echo ""
+    echo "======================== ---> Check ALE CPPCHECK <--- =================="
+    echo ""
+    echo "WARNING: ALE CPPCHECK handler contains file-filter entry, it may fail and won't show errors on VIM!"
+    echo "Please edit: ale/autoload/ale/handlers/cppcheck.vim"
+    echo "And replace: \\   ? '--project=' . ale#Escape(l:json_path[len(l:dir) + 1: ]) . ' --file-filter=' . ale#Escape(bufname(a:buffer))"
+    echo "with:        \\   ? '--project=' . ale#Escape(l:json_path[len(l:dir) + 1: ])"
+    exit 1
+fi
+exit 0
