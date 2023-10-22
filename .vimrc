@@ -204,7 +204,7 @@ let g:ale_sh_bashate_options = '--ignore "E003,E006"'
 " let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle'] , }
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'pylint', 'mypy', 'flake8'] , }
-let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'flake8', 'pep8'] , 'sh': ['bashate', 'shellcheck']}
+" let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'flake8', 'pep8', "pylint", "mypy"] , 'sh': ['bashate', 'shellcheck']}
 
 " Syntactic
 " let g:syntastic_python_flake8_args='--ignore=F821,E302'
