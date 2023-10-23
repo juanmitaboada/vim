@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# djmoch/vim-makejob
-
 base='
 Raimondi/delimitMate
 honza/vim-snippets
@@ -41,6 +39,14 @@ aesnyder/vim-radon
 itspriddle/vim-shellcheck
 rhysd/vim-clang-format
 '
+
+# === Other plugins ===
+
+# djmoch/vim-makejob
+# github/copilot.vim        # Copilot
+# madox2/vim-ai             # ChatGPT
+# dense-analysis/neural     # Multi-language AI code completion
+
 # You complete me:
 # Valloric/YouCompleteMe
 # d98f896ada495c3687007313374b2f945a2f2fb4
@@ -49,11 +55,10 @@ rhysd/vim-clang-format
 # LucHermitte/lh-vim-lib
 # LucHermitte/local_vimrc
 
-# Old vim-isort pluggin
-# fisadev/vim-isort
-
 # Golang - https://pmihaylov.com/vim-for-go-development/
 # tpope/vim-pathogen
+
+# =====================
 
 # Make sure basic packages are installed
 for url in $base ; do

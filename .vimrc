@@ -227,10 +227,10 @@ nmap <silent> <C-S-Right> <Plug>(ale_next_wrap)
 " let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Add support for prospector
-autocmd FileType python setlocal makeprg=prospector\ -8\ -o\ pylint\ % errorformat=%f:%l:\ %m
-let g:makejob_hide_preview_window = 1
-map  <C-x> :MakeJob<CR>:copen<CR><C-w><Up>
-map! <C-x> <Esc>:MakeJob<CR>:copen<CR><C-w><Up>
+" autocmd FileType python setlocal makeprg=prospector\ -8\ -o\ pylint\ % errorformat=%f:%l:\ %m
+" let g:makejob_hide_preview_window = 1
+" map  <C-x> :MakeJob<CR>:copen<CR><C-w><Up>
+" map! <C-x> <Esc>:MakeJob<CR>:copen<CR><C-w><Up>
 
 " Add to .vimrc to enable project-specific vimrc
 set exrc
