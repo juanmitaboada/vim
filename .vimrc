@@ -1,7 +1,6 @@
 if !1 | finish | endif
 
 " VIM Juanmi Taboada:
-" Version: 20230308
 " Author: Juanmi Taboada <juanmi@juanmitaboada.com> - http://www.juanmitaboada.com
 "
 " === CHEATSHEET ===
