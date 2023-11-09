@@ -38,6 +38,7 @@ coddingtonbear/neomake-platformio
 aesnyder/vim-radon
 itspriddle/vim-shellcheck
 rhysd/vim-clang-format
+tpope/vim-unimpaired
 '
 
 # === Other plugins ===

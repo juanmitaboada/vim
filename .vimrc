@@ -26,6 +26,12 @@ if !1 | finish | endif
 " <Enter>           Go to function definition               [ vim ]
 " <Backspace>       Go back from function definion          [ vim ]
 "
+" Ale:
+" [a                Go to previous error                    [ ale ]
+" ]a                Go to next error                        [ ale ]
+" [A                Go to first error                       [ ale ]
+" ]A                Go to last error                        [ ale ]
+"
 " Ultisnips:
 " :help ultisnips
 " <Control+b> to move to next element
@@ -195,6 +201,8 @@ let g:ale_c_clangtidy_options = '-system-headers'
 let g:ale_c_clangtidy_checks = ['-clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling']
 let g:ale_cpp_clangtidy_options = '-system-headers'
 let g:ale_cpp_clangtidy_checks = ['-clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling']
+let g:ale_c_cppcheck_options = '--force'
+let g:ale_cpp_cppcheck_options = '--force'
 let g:ale_sign_column_always = 1
 let g:ale_python_pycodestyle_options = '--ignore=E203,W503'
 let g:ale_python_flake8_options = '--ignore=E203,W503'
@@ -204,6 +212,12 @@ let g:ale_sh_bashate_options = '--ignore "E003,E006"'
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle'] , }
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'pylint', 'mypy', 'flake8'] , }
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'flake8', 'pep8', "pylint", "mypy"] , 'sh': ['bashate', 'shellcheck']}
+
+" Unpaired configuration for ALE
+:nmap ]a :ALENextWrap<CR>
+:nmap [a :ALEPreviousWrap<CR>
+:nmap ]A :ALELast
+:nmap [A :ALEFirst
 
 " Syntactic
 " let g:syntastic_python_flake8_args='--ignore=F821,E302'
