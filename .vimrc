@@ -201,7 +201,7 @@ let g:ale_c_clangtidy_options = '-system-headers'
 let g:ale_c_clangtidy_checks = ['-clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling']
 let g:ale_cpp_clangtidy_options = '-system-headers'
 let g:ale_cpp_clangtidy_checks = ['-clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling']
-let g:ale_c_cppcheck_options = '--force'
+let g:ale_c_cppcheck_options = '--force --inline-suppr'
 let g:ale_cpp_cppcheck_options = '--force'
 let g:ale_sign_column_always = 1
 let g:ale_python_pycodestyle_options = '--ignore=E203,W503'
