@@ -35,22 +35,18 @@ MaskRay/ccls
 prabirshrestha/vim-lsp
 normen/vim-pio
 coddingtonbear/neomake-platformio
-aesnyder/vim-radon
+juanmitaboada/vim-radon
 itspriddle/vim-shellcheck
 rhysd/vim-clang-format
 tpope/vim-unimpaired
+github/copilot.vim
 '
 
 # === Other plugins ===
 
 # djmoch/vim-makejob
-# github/copilot.vim        # Copilot
 # madox2/vim-ai             # ChatGPT
 # dense-analysis/neural     # Multi-language AI code completion
-
-# You complete me:
-# Valloric/YouCompleteMe
-# d98f896ada495c3687007313374b2f945a2f2fb4
 
 # Local vim... (it asks the user everytime you open a file)
 # LucHermitte/lh-vim-lib
