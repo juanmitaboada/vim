@@ -10,7 +10,6 @@ vim-airline/vim-airline
 SirVer/ultisnips
 airblade/vim-gitgutter
 tpope/vim-commentary
-leafgarland/typescript-vim
 majutsushi/tagbar
 pangloss/vim-javascript
 tpope/vim-dispatch
@@ -29,7 +28,6 @@ Valloric/YouCompleteMe
 brentyi/isort.vim
 psf/black
 tpope/vim-pathogen
-rust-lang/rust.vim
 ziglang/zig.vim
 MaskRay/ccls
 prabirshrestha/vim-lsp
@@ -54,6 +52,10 @@ github/copilot.vim
 
 # Golang - https://pmihaylov.com/vim-for-go-development/
 # tpope/vim-pathogen
+
+# === Not used ===
+# leafgarland/typescript-vim
+# rust-lang/rust.vim
 
 # =====================
 
