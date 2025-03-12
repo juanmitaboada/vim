@@ -38,6 +38,7 @@ itspriddle/vim-shellcheck
 rhysd/vim-clang-format
 tpope/vim-unimpaired
 github/copilot.vim
+rust-lang/rust.vim
 '
 
 # === Other plugins ===
@@ -55,7 +56,6 @@ github/copilot.vim
 
 # === Not used ===
 # leafgarland/typescript-vim
-# rust-lang/rust.vim
 
 # =====================
 
