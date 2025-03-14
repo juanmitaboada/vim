@@ -26,7 +26,7 @@ sudar/vim-arduino-syntax
 sudar/vim-arduino-snippets
 Valloric/YouCompleteMe
 brentyi/isort.vim
-psf/black
+psf/black:stable
 tpope/vim-pathogen
 ziglang/zig.vim
 MaskRay/ccls
@@ -60,19 +60,32 @@ rust-lang/rust.vim
 # =====================
 
 # Make sure basic packages are installed
-for url in $base ; do
+for info in $base ; do
+    # Split info into URL and branch
+    url="$(echo "$info" | cut -d ":" -f 1)"
+    branch="$(echo "$info" | cut -d ":" -f 2)"
+
+    # Get user and repo
     user="$(echo "$url" | cut -d "/" -f 1)"
     repo="$(echo "$url" | cut -d "/" -f 2)"
+
+    # Clone the repo
     if [[ ! -e $repo ]] ; then
         git clone "https://github.com/$user/$repo"
+
+        # Checkout the branch
+        if [[ -n $branch ]] ; then
+            cd "$repo" || exit
+            git checkout --track "origin/$branch"
+            cd ..
+        fi
+
     fi
 done
 
-# Now go for the upgrade
-
+# Now go for the upgrade, get the list of directories and update them
 cwd="$(pwd)"
 elements="$(/bin/ls)"
-
 for element in $elements ; do
     cd "$cwd" || exit
     if [[ -d $element ]] ; then

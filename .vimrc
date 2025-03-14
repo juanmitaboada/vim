@@ -195,7 +195,7 @@ nmap <F8> :mks! .session.vim<CR>
 " E503: Line break occurred before a binary operator
 
 " ALE configuration (Asynchronous Linter Engine)
-let g:ale_c_cpplint_options = '--filter=-legal/copyright,-readability/casting,-runtime/int,-build/include_subdir'
+let g:ale_c_cpplint_options = '--filter=-legal/copyright,-readability/casting,-runtime/int,-build/include_subdir,-readability/todo'
 let g:ale_cpp_cpplint_options = '--filter=-legal/copyright'
 let g:ale_c_clangtidy_options = '-system-headers'
 let g:ale_c_clangtidy_checks = ['-clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling']
