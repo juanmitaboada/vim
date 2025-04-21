@@ -1,5 +1,6 @@
 #!/bin/bash
 
+logfile="$(pwd)/update.log"
 base='
 Raimondi/delimitMate
 honza/vim-snippets
@@ -59,25 +60,41 @@ rust-lang/rust.vim
 
 # =====================
 
+# Log function
+function log {
+    element="$1"
+    action="$2"
+    commit="$3"
+    timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+    printf "%-20s %-30s %-10s %s\n" "${timestamp}" "${element}" "${action}" "${commit}" >> "$logfile"
+}
+
 # Make sure basic packages are installed
+commit=""
 for info in $base ; do
     # Split info into URL and branch
-    url="$(echo "$info" | cut -d ":" -f 1)"
-    branch="$(echo "$info" | cut -d ":" -f 2)"
+    url="$(echo "$info" | awk -F: '{print $1}')"
+    branch="$(echo "$info" | awk -F: '{print $2}')"
 
     # Get user and repo
-    user="$(echo "$url" | cut -d "/" -f 1)"
-    repo="$(echo "$url" | cut -d "/" -f 2)"
+    user="$(echo "$url" | awk -F/ '{print $1}')"
+    repo="$(echo "$url" | awk -F/ '{print $2}')"
+
+    commit=""
 
     # Clone the repo
     if [[ ! -e $repo ]] ; then
         git clone "https://github.com/$user/$repo"
+        commit=$(git log | head -n 1)
+        log "${user}/${repo}" "Cloned" "${commit}"
 
         # Checkout the branch
         if [[ -n $branch ]] ; then
             cd "$repo" || exit
             git checkout --track "origin/$branch"
             cd ..
+            commit=$(git log | head -n 1)
+            log "${repo}" "Checkout to origin/$branch" "${commit}"
         fi
 
     fi
@@ -91,9 +108,11 @@ for element in $elements ; do
     if [[ -d $element ]] ; then
         cd "$element" || exit
         if [[ -d .git ]] ; then
-           echo "Updating ${element}..."
-           git pull
-           echo
+            echo "Updating ${element}..."
+            git pull
+            commit=$(git log | head -n 1)
+            log "${element}" "Pulled" "${commit}"
+            echo
         fi
     fi
 done
