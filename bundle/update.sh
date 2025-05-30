@@ -130,7 +130,7 @@ echo "Recompiling submodules..."
 cd ..
 
 # Verify ALE CPPCHECK plugin status
-if grep -q "file-filter" ale/autoload/ale/handlers/cppcheck.vim ; then
+if grep -q "file-filter=" ale/autoload/ale/handlers/cppcheck.vim ; then
     echo ""
     echo "======================== ---> Check ALE CPPCHECK <--- =================="
     echo ""
