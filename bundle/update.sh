@@ -40,6 +40,7 @@ rhysd/vim-clang-format
 tpope/vim-unimpaired
 github/copilot.vim
 rust-lang/rust.vim
+DanBradbury/copilot-chat.vim
 '
 
 # === Other plugins ===
