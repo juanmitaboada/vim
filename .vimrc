@@ -103,10 +103,13 @@ ab usetab :set noet ci pi sts=0 sw=4 ts=4 " Show tab character
 
 " Remember last position
 if has("autocmd")
+    
     autocmd BufReadPost * if line("'\"") && line("'\"") <= line("$") | exe "normal `\"" | endif
 endif
 
 let g:black_linelength = 79
+" let g:black_command = 'black'
+" let g:black_command = expand('~/.vim/ale_black.sh')
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -193,6 +196,7 @@ nmap <F8> :mks! .session.vim<CR>
 " E203: Whitespace before ':'
 " E501: Line too long
 " E503: Line break occurred before a binary operator
+" E704: Multiple statements on one line (def)
 
 " ALE configuration (Asynchronous Linter Engine)
 let g:ale_c_cpplint_options = '--filter=-legal/copyright,-readability/casting,-runtime/int,-build/include_subdir,-readability/todo'
@@ -204,14 +208,30 @@ let g:ale_cpp_clangtidy_checks = ['-clang-analyzer-security.insecureAPI.Deprecat
 let g:ale_c_cppcheck_options = '--force --inline-suppr'
 let g:ale_cpp_cppcheck_options = '--force'
 let g:ale_sign_column_always = 1
-let g:ale_python_pycodestyle_options = '--ignore=E203,W503'
-let g:ale_python_flake8_options = '--ignore=E203,W503'
+let g:ale_python_pycodestyle_options = '--ignore=E203,W503,E704'
+let g:ale_python_flake8_options = '--ignore=E203,W503,E704'
 let g:ale_sh_bashate_options = '--ignore "E003,E006"'
-" let g:ale_python_pylint_executable = 'pylint'
 " let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle'] , }
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'pylint', 'mypy', 'flake8'] , }
 " let g:ale_linters = { 'python': ['pyflakes3', 'pycodestyle', 'flake8', 'pep8', "pylint", "mypy"] , 'sh': ['bashate', 'shellcheck']}
+let g:ale_python_mypy_executable = expand('~/.vim/ale_mypy.sh')
+let g:ale_python_mypy_use_global = 0
+let g:ale_python_pylint_executable = expand('~/.vim/ale_pylint.sh')
+let g:ale_python_pylint_use_global = 0
+let g:ale_python_pylint_options = '--disable=cannot-enumerate-pytest-fixtures'
+" Set up an Auto-Command for Test files only
+augroup AlePytestConfig
+    autocmd!
+    " When opening files named test_*.py or *_test.py...
+    autocmd BufRead,BufNewFile test_*.py,*_test.py call SetPytestOptions()
+augroup END
+" The function that adds the extra disable flag
+function! SetPytestOptions()
+    " Append ',redefined-outer-name' to whatever the global options are
+    let b:ale_python_pylint_options = g:ale_python_pylint_options . ',redefined-outer-name'
+endfunction
+
 
 " Unpaired configuration for ALE
 :nmap ]a :ALENextWrap<CR>
@@ -222,11 +242,11 @@ let g:ale_sh_bashate_options = '--ignore "E003,E006"'
 " Syntactic
 " let g:syntastic_python_flake8_args='--ignore=F821,E302'
 " let g:syntastic_python_flake8_args='--ignore=E203'
-let g:syntastic_python_flake8_args='--ignore=E203,W503'
+let g:syntastic_python_flake8_args='--ignore=E203,W503,E704'
 let g:syntastic_sh_checkers = ['bashate', 'shellcheck']
 let g:syntastic_sh_bashate_args = '--ignore "E003,E006"'
 
-let g:pymode_lint_ignore='--ignore=E203,W503'
+let g:pymode_lint_ignore='--ignore=E203,W503,E704'
 
 " ==========================================================
 

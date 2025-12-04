@@ -48,6 +48,7 @@ DanBradbury/copilot-chat.vim
 # djmoch/vim-makejob
 # madox2/vim-ai             # ChatGPT
 # dense-analysis/neural     # Multi-language AI code completion
+# junegunn/fzf.vim
 
 # Local vim... (it asks the user everytime you open a file)
 # LucHermitte/lh-vim-lib
@@ -127,7 +128,7 @@ cd YouCompleteMe/ || exit
 echo "Updating submodules..."
 git submodule update --init --recursive
 echo "Recompiling submodules..."
-./install.py --clang-completer
+python3 install.py --clang-completer
 cd ..
 
 # Verify ALE CPPCHECK plugin status
