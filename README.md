@@ -1,6 +1,21 @@
 # My VIM configuration
 
-I have worked daily with vim since childhood, and this is my actual vim configuration.
+> [!WARNING]
+> **This configuration is deprecated and no longer maintained.**
+>
+> I have moved from Vim to Neovim and now use
+> [**juanmitaboada/nvim**](https://github.com/juanmitaboada/nvim) daily instead.
+> The Neovim setup is built to keep the same muscle memory and shortcuts as this
+> one, so it behaves just like this config — and then some. On top of the classic
+> workflow it adds native LSP, Treesitter, Telescope, GitHub Copilot and a
+> Python-first toolchain (basedpyright + Ruff + mypy).
+>
+> If you are setting things up from scratch, head over to the
+> [Neovim repository](https://github.com/juanmitaboada/nvim). This repository
+> stays online for reference only.
+
+I worked daily with vim since childhood, and this was my daily vim configuration
+for years.
 
 ## Screenshots
 
